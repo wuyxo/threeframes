@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/wuyxo/threeframes.git"
   },
   "dependencies": {
     "import-three-examples": "^2.2.3",
