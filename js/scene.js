@@ -2,6 +2,8 @@ import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import loadObj from './loadobj'
+import loadDrc from './loaddrc'
 
 /** 
  * 创建场景加载模型
@@ -10,12 +12,12 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
  * @param $axesHelper 是否开启坐标辅助
  * @param $cameraHelper 是否开启相机辅助
  * @param $gridHelper 是否开启网格辅助
- * @param
+ * @param $objUrl 加载模型的URL
  * @param
  * @param
  * @param
  */
-function createScene(con,constant,axesHelper,cameraHelper,gridHelper) {
+function createScene(con,constant,axesHelper,cameraHelper,gridHelper,modelUrl) {
   if(THREE===undefined){return console.log('THREE is not defined')}
   // 自定义常量
   let constantArr = []
@@ -60,6 +62,17 @@ function createScene(con,constant,axesHelper,cameraHelper,gridHelper) {
   // 加入灯光
   let shadowLight = new THREE.DirectionalLight(0xffffff, .9);
 	scene.add(shadowLight)
+  // 加载模型
+  switch (modelUrl.category) {
+    case 'obj':
+      loadObj(modelUrl,scene)
+      break;
+    case 'drc':
+      loadDrc(modelUrl,scene)
+      break;
+    default:
+      break;
+  }
   // 鼠标射线监控
   let raycaster = new THREE.Raycaster()
   // 新建一个Vector2对象保存鼠标位置信息,监听鼠标移动事件
@@ -94,4 +107,4 @@ function createScene(con,constant,axesHelper,cameraHelper,gridHelper) {
   animate()
 }
 
-export default Scene
+export default createScene
