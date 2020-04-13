@@ -80,8 +80,6 @@ function loadDrc(url,scene) {
       });
     }
     reader.readAsArrayBuffer(loadfile)
-    init()
-    animate()
   }
   // 加载drc文件
   function downloadEncodedMesh(filename) {
