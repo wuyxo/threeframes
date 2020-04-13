@@ -1,10 +1,24 @@
-import React from 'react'
 import * as THREE from 'three'
 
+/** 
+ * 创建场景加载模型
+ * @param 
+ * @param
+ * @param
+ * @param
+ * @param
+ * @param
+ * @param
+ * @param
+ * @param
+ */
 function Scene() {
-  console.log('我是测试的文本',THREE)
+  if(THREE){return console.log('THREE is not defined')}
+  let scene = new THREE.Scene()
+  
+  
 
-  return <div>1234567 THREE ceshi</div> 
+
 }
 
 export default Scene

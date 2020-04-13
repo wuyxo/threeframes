@@ -1,6 +1,6 @@
 {
   "name": "threeframes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "threejs model",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "import-three-examples": "^2.2.3",
-    "react": "^16.13.1",
     "three": "^0.112.1"
   },
   "keywords": [
