@@ -1,6 +1,7 @@
-import Scene from './js/scene'
-
+import createScene from './js/scene'
+import loadObj from './js/loadobj'
 
 export {
-  Scene
+  createScene,
+  loadObj
 }
