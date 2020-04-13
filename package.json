@@ -1,0 +1,25 @@
+{
+  "name": "threeframes",
+  "version": "1.0.0",
+  "description": "threejs model",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "import-three-examples": "^2.2.3",
+    "react": "^16.13.1",
+    "three": "^0.112.1"
+  },
+  "keywords": [
+    "threejs",
+    "web",
+    "canvas"
+  ],
+  "author": "wuyx",
+  "license": "ISC"
+}
