@@ -1,6 +1,6 @@
 {
   "name": "threeframes",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "threejs model",
   "main": "index.js",
   "scripts": {

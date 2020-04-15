@@ -1,9 +1,8 @@
 import * as THREE from 'three'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import loadObj from './loadobj'
 import loadDrc from './loaddrc'
+import loadGltf from './loadgltf'
 
 /** 
  * 创建场景加载模型
@@ -69,6 +68,9 @@ function createScene(con,constant,axesHelper,cameraHelper,gridHelper,modelUrl) {
       break;
     case 'drc':
       loadDrc(modelUrl,scene)
+      break;
+    case 'gltf':
+      loadGltf(modelUrl,scene)
       break;
     default:
       break;
